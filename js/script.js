@@ -5,8 +5,10 @@
 
 $("#search-button").click(function(){
   $(".gallery").empty();
-  var custom_url="https://api.giphy.com/v1/gifs/search?q=puppy&rating=pg&api_key=dc6zaTOxFJmzC";
   var searched=$("#search-term").val();
+  var custom_url="https://api.giphy.com/v1/gifs/search?q="+searched+"&rating=pg&api_key=dc6zaTOxFJmzC";
+  
+ 
   $.ajax({
       url:custom_url,
       method:"GET",
